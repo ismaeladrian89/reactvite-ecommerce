@@ -24,6 +24,16 @@ const AdminLogin = () => {
         //console.log(state)
     }
 
+    /*const handleLogin = async () => {
+        try{const response =  await api.post('/admin-login', {
+            email: email,
+            password: password
+           });
+        console.log(response.data)} catch (error) {
+            console.log(error);
+        }
+      }*/
+
     return (
         <div className='min-w-screen min-h-screen bg-[#cdcae9] flex justify-center items-center'>
             <div className='w-[350px] text-[#ffffff] p-2'>
