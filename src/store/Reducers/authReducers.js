@@ -4,33 +4,30 @@ import api from "../../api/api";
 export const admin_login = createAsyncThunk(
     'auth/admin_login',
     async(info) => {
-        console.log(info)
-        try{
-        const {data} = await api.post('/admin/login', info, 
-            {withCredentials: true})
+         console.log(info)
+        try {
+            const {data} = await api.post('/admin-login',info,{withCedentials: true})
             console.log(data)
         } catch (error) {
-                console.log(error.message.data)
+            console.log(error.response.data)
         }
     }
 )
 
-
-export const authReducers = createSlice({
-
+export const authReducer = createSlice({
     name: 'auth',
     initialState:{
-        successMessage: '',
-        errorMessage: '',
+        successMessage :  '',
+        errorMessage : '',
         loader: false,
-        userInfo: ''
+        userInfo : ''
+    },
+    reducers : {
 
     },
-    redurcers : {
-
-    },
-    extraReducers : () => {
+    extraReducers: () => {
 
     }
 })
-export default authReducers.reducer
+
+export default authReducer.reducer
