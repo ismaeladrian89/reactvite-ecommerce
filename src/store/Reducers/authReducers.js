@@ -6,7 +6,7 @@ export const admin_login = createAsyncThunk(
     async(info, {rejectedWithValue, fulfillWithValue}) => {
          console.log(info)
         try {
-            const {data} = await api.post('/admin-login',info,{withCredentials: true})
+            const {data} = await api.post('/admin-login',info,{withCedentials: true})
             //console.log(data)
             return fulfillWithValue(data)
         } catch (error) {
